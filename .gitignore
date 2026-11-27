@@ -1,0 +1,21 @@
+node_modules/
+out/
+dist/
+coverage/
+*.db
+*.db-shm
+*.db-wal
+.DS_Store
+.env
+.env.*
+!.env.example
+
+# 本地示例稿件仓库（Obsidian 默认欢迎笔记，不属于项目代码）
+books/
+
+# 日志与临时产物
+*.log
+i18n-missing.json
+
+# 本地智能体工作记录（含本机路径，不入库）
+.workbuddy/

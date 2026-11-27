@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.9.0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Type check, tests and build
+        run: pnpm typecheck && pnpm typecheck:vue && pnpm test && pnpm build
+
+      - name: Headless startup smoke test
+        run: xvfb-run -a pnpm smoke
+
+      - name: IPC and UI audit
+        run: xvfb-run -a pnpm ui-audit

@@ -1,0 +1,135 @@
+/** 主壳层：侧栏、书架、顶栏、标签页、通用弹窗、状态标签 */
+export const shell: Record<string, string> = {
+  // 品牌
+  小说创作工作台: 'Novel writing workbench',
+
+  // 侧栏 · 书房
+  书房: 'Library',
+  '重新读取书库（外部改动数据目录后使用）': 'Reload library (use after the data folder changed)',
+  '+ 新建作品': '+ New book',
+  还没有作品: 'No books yet',
+  '← 返回书房': '← Back to library',
+  作品设置: 'Book settings',
+  '+ 新建章节': '+ New chapter',
+  导入旧稿: 'Import manuscript',
+  '卷/章标题 + 正文，可直接投稿': 'Volume & chapter titles plus body text, ready to submit',
+  '导出 TXT': 'Export TXT',
+  'Markdown 可读版': 'Readable Markdown',
+  '导出 MD': 'Export MD',
+  '含事实源表格，用于归档备份': 'Includes fact-source tables, for archival backup',
+  导出归档版: 'Export archive',
+  未归卷: 'Ungrouped',
+  '第 {n} 卷 · {title}': 'Vol. {n} · {title}',
+  还没有章节: 'No chapters yet',
+  '▶ 运行检查': '▶ Run checks',
+  '⚙ AI 设置': '⚙ AI settings',
+  '💾 备份书库': '💾 Back up library',
+  '📁 数据目录': '📁 Data folder',
+
+  // 顶栏
+  '返回工作台': 'Back to workbench',
+  我的书架: 'My bookshelf',
+  '{n} 本作品': '{n} books',
+  '搜索书名或总纲…': 'Search title or synopsis…',
+  新建作品: 'New book',
+  书架还空着: 'Your shelf is empty',
+  没有匹配的作品: 'No matching books',
+  '新建一本作品，或从 Obsidian 仓库导入旧稿。':
+    'Create a book, or import an old manuscript from an Obsidian vault.',
+  换个关键词试试: 'Try another keyword.',
+  '换个关键词试试。': 'Try another keyword.',
+  '{n} 章': '{n} chapters',
+  '{n} 卷': '{n} volumes',
+  未分卷: 'No volumes',
+  '继续写 →': 'Continue →',
+  全书检索: 'Full-text search',
+  返回: 'Back',
+  选择或新建一章: 'Select or create a chapter',
+  '每一章都经过门禁检查与事实源审计，由你定稿。':
+    'Every chapter runs through gate checks and fact-source audit before you finalize it.',
+  事实源: 'Facts',
+  检索: 'Search',
+  '第 {n} 章': 'Chapter {n}',
+  '目标 {n} 字': 'Target {n} words',
+
+  // 章节头部与标签页
+  章节设置: 'Chapter settings',
+  '▶ 检查本章': '▶ Check chapter',
+  正文与章纲: 'Text & outline',
+  检查报告: 'Checks',
+  正在加载正文: 'Loading text…',
+  '正在加载正文…': 'Loading text…',
+  正文尚未载入: 'Text not loaded',
+  '可以重试加载，也可以先看检查报告与事实源。':
+    'Retry loading, or look at the checks and facts first.',
+  重新加载: 'Reload',
+
+  // 状态 / Strand
+  章纲: 'Outline',
+  草稿: 'Draft',
+  已审稿: 'Reviewed',
+  已定稿: 'Final',
+  主线: 'Main plot',
+  感情线: 'Romance',
+  世界观: 'Worldbuilding',
+
+  // 通用弹窗
+  取消: 'Cancel',
+  创建: 'Create',
+  保存: 'Save',
+  关闭: 'Close',
+  删除: 'Delete',
+  作品名称: 'Title',
+  '例如：雾港灯塔': 'e.g. Fog Harbor Lighthouse',
+  '题材（可选，决定门禁与审计侧重）': 'Genre (optional; sets gate & audit strictness)',
+  '创建后导入旧稿（支持 Obsidian 仓库文件夹）':
+    'Import a manuscript right after creating (Obsidian vault folders supported)',
+  章节标题: 'Chapter title',
+  留空则自动生成: 'Leave blank to auto-generate',
+  新章将归入当前章节所属的卷: 'The new chapter joins the current chapter’s volume.',
+  '新章将归入当前章节所属的卷。': 'The new chapter joins the current chapter’s volume.',
+  '松开即可导入 txt / md 旧稿': 'Drop to import a .txt / .md manuscript',
+  '处理中…': 'Working…',
+
+  // 操作提示与错误
+  重排失败: 'Reorder failed',
+  章序已更新: 'Chapter order updated',
+  '只能在同一卷内拖动排序；要换卷请用「章节设置」调整归属':
+    'Drag to reorder within the same volume only. Use Chapter settings to move across volumes.',
+  '重排会改变第 {a} 章与第 {b} 章之间的顺序。\n\n已登记 {f} 条伏笔的回收章号、{t} 条时间线的章序不会自动跟随，重排后需要你复核。\n\n继续？':
+    'Reordering swaps the positions of chapter {a} and chapter {b}.\n\n{f} foreshadow resolve chapters and {t} timeline entries are pinned by chapter number and will not follow automatically — please review them after reordering.\n\nContinue?',
+  加载作品失败: 'Failed to load books',
+  打开作品失败: 'Failed to open the book',
+  刷新失败: 'Refresh failed',
+  加载正文失败: 'Failed to load the text',
+  新建作品失败: 'Failed to create the book',
+  新建章节失败: 'Failed to create the chapter',
+  '当前章节有未保存的修改，继续操作会丢失这些改动。是否继续？':
+    'This chapter has unsaved changes that will be lost. Continue?',
+  检查失败: 'Check failed',
+  '检查完成：无阻断项': 'Checks finished: no blockers',
+  '检查完成：存在阻断项': 'Checks finished: blockers found',
+  'AI 审稿失败': 'AI review failed',
+  'AI 审稿完成：{n} 条观察': 'AI review finished: {n} observations',
+  导出失败: 'Export failed',
+  '已导出到 {path}': 'Exported to {path}',
+  备份失败: 'Backup failed',
+  '已备份书库（{size} MB）：{file}': 'Library backed up ({size} MB): {file}',
+  打开数据目录失败: 'Failed to open the data folder',
+  '数据目录：{path}': 'Data folder: {path}',
+  作品已删除: 'The book was deleted',
+  '无法读取文件路径，请改用「导入旧稿 → 选择文件」':
+    'Cannot read the file path. Please use Import manuscript → Choose file instead.',
+  '今天 {time}': 'Today {time}',
+  '{n} 万字': '{n}k words',
+  '{n} 字': '{n} words',
+
+  // 语言切换
+  语言: 'Language',
+  切换到英文: 'Switch to English',
+  '切换到中文': 'Switch to Chinese',
+  '请先打开一本作品再导入旧稿': 'Open a book before importing a manuscript',
+  '请先打开一本作品再导出': 'Open a book before exporting',
+  'AI 设置': 'AI settings',
+  '新建章节': 'New chapter',
+};
